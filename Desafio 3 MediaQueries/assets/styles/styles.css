@@ -1,0 +1,238 @@
+/* Estilos generales */
+* {
+ background-color: rgb(255, 255, 255);
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "Roboto", sans-serif;
+}
+
+/* Estilos MediaQueries */
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* Estilos Grid */
+.grid-areas {
+ display: grid;
+ /* Grid de 2cx3r */
+ grid-template-columns: 200px 1fr;
+ grid-template-rows: 100px auto auto;
+ grid-template-areas:
+  "sidebar  header"
+  "sidebar  content"
+  "sidebar  content"
+  "footer   content";
+}
+
+.header {
+ grid-area: header;
+}
+
+.content {
+ grid-area: content;
+}
+
+.sidebar {
+ grid-area: sidebar;
+}
+
+.footer {
+ grid-area: footer;
+}
+
+/* Estilos Header */
+.header,
+.navbar,
+.navbar p {
+ background-color: rgb(186, 185, 185);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+.header select {
+ width: 1600px;
+}
+
+/* Estilos Cards de los productos */
+.product-card {
+ display: inline-flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
+ padding: 1.5rem;
+ gap: 0.9rem;
+ margin-bottom: 2rem;
+}
+
+.card,
+.products,
+.buttom,
+.products h3,
+.products p {
+ background-color: white;
+}
+
+.card img {
+ width: 300px;
+ height: auto;
+ border-radius: 1%;
+}
+
+.products,
+.products h3,
+.products p {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 0.5rem;
+}
+
+.buttom,
+.h3 {
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding-bottom: 1rem;
+}
+
+.buttom h3 {
+ background-color: #0d6efd;
+ color: white;
+}
+
+.pages {
+ display: flex;
+ flex-direction: row;
+}
+
+/* Estilos Sidebar */
+.sidebar,
+.title,
+.title i,
+.title h5,
+ul,
+li {
+ background-color: #0d6efd;
+ color: white;
+}
+
+.title {
+ display: flex;
+ align-items: center;
+ padding: 1.5rem;
+ gap: 1rem;
+}
+
+ul {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 1rem;
+ gap: 0.5rem;
+ list-style: none;
+}
+
+/* Estilos Pagination */
+.pagination {
+ background-color: rgb(255, 255, 255);
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+}
+
+.page-item {
+ background-color: rgb(255, 255, 255);
+}
+
+/* Estilos Footer */
+.footer {
+ background-color: #0e5bcf;
+ color: white;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 1rem;
+}
+
+.container {
+ background-color: #0e5bcf;
+ color: white;
+}
+
+strong {
+ background-color: #0e5bcf;
+ color: white;
+}
+
+/* Estilos MediaQueries */
+
+@media (max-width: 576px) {
+ .grid-areas {
+  display: grid;
+  /* Grid de 1cx4r */
+  grid-template-columns: 200px;
+  grid-template-rows: repeat(4, 1fr, 50px, auto, 50px);
+  grid-template-areas:
+   "sidebar sidebar "
+   "header  header"
+   "content content"
+   "footer  footer";
+ }
+
+ .sidebar {
+  grid-area: sidebar;
+ }
+
+ .header {
+  grid-area: header;
+ }
+
+ .content {
+  grid-area: content;
+ }
+
+ .footer {
+  grid-area: footer;
+ }
+
+ .title {
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
+ }
+
+ ul {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 1rem;
+  gap: 0.5rem;
+  list-style: none;
+ }
+
+ .header,
+ .navbar,
+ .navbar p {
+  background-color: rgb(186, 185, 185);
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+ }
+
+ .navbar {
+  width: 100vw;
+ }
+
+ .footer {
+  background-color: #0e5bcf;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+ }
+}
